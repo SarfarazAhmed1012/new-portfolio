@@ -8,6 +8,7 @@ import BlogComponent from "./BlogComponent";
 import { Blogs } from "../data/BlogData";
 import AnchorComponent from "../subComponents/Anchor";
 import { useState } from "react";
+import BigTitle from "../subComponents/BigTitle";
 
 const MainContainer = styled.div`
   background-image: url(${img});
@@ -36,6 +37,7 @@ const Grid = styled.div`
   display: grid;
   grid-template-columns: repeat(2, minmax(calc(10rem + 15vw), 1fr));
   grid-gap: calc(1rem + 2vw);
+  z-index: 2;
 `;
 
 const BlogPage = () => {
@@ -59,6 +61,12 @@ const BlogPage = () => {
             })}
           </Grid>
         </Center>
+        <BigTitle
+          text="BLOGS"
+          top="5rem"
+          left="5rem"
+          rgba="rgba(61, 61, 71, 0.6)"
+        />
       </Container>
     </MainContainer>
   );

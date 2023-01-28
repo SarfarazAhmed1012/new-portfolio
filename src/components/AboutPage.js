@@ -6,6 +6,7 @@ import SocialIcons from "../subComponents/SocialIcons";
 import PowerButton from "../subComponents/PowerButton";
 import ParticleComponent from "../subComponents/ParticleComponent";
 import astronaut from "../assets/Images/pngegg.png";
+import BigTitle from "../subComponents/BigTitle";
 
 const Box = styled.div`
   background-color: ${(props) => props.theme.body};
@@ -77,6 +78,12 @@ const AboutPage = () => {
           <br></br>I believe everything is an Art when you put your
           consciousness in it. You can connect with me via social links.
         </Main>
+        <BigTitle
+          text="ABOUT"
+          top="10%"
+          left="5%"
+          rgba="rgba(118, 157, 181, 0.2);"
+        />
       </Box>
     </ThemeProvider>
   );
