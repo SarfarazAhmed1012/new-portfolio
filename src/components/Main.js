@@ -5,6 +5,8 @@ import LogoComponent from "../subComponents/LogoComponent";
 import PowerButton from "../subComponents/PowerButton";
 import SocialIcons from "../subComponents/SocialIcons";
 import "./style.css";
+import Particles from "react-particles-js";
+import configNew from "../config/particlejs-config-new.json";
 // import { YinYang } from "./AllSvgs";
 // import Football from "../assets/Images/football.png"
 
@@ -127,6 +129,22 @@ const Center = styled.button`
     display: ${(props) => (props.click ? "none" : "inline-block")};
     padding-top: 1rem;
   }
+  &:hover span {
+    /* color: lightblue; */
+    opacity: 0.5;
+    /* animation: ${rotate} infinite 5.5s linear; */
+    /* box-shadow: 0 0 8px 6px rgba(109, 0, 255, 0.3); */
+    /* border-radius: 50%; */
+  }
+  .football_icon {
+    &:hover {
+      /* color: lightblue; */
+      opacity: 0.8;
+      animation: ${rotate} infinite 5.5s linear;
+      box-shadow: 0 0 8px 6px rgba(109, 0, 255, 0.3);
+      border-radius: 50%;
+    }
+  }
 `;
 
 const DarkDiv = styled.div`
@@ -147,6 +165,7 @@ const Main = () => {
 
   return (
     <MainContainer>
+      <Particles params={configNew} />
       <DarkDiv click={click} />
       <Container>
         <PowerButton />

@@ -16,6 +16,28 @@ const Icons = styled.div`
   & > *:not(:last-child) {
     margin: 0.5rem 0;
   }
+  .social_buttons {
+    &:hover {
+      background-color: rgba(109, 0, 255, 0.3);
+      box-shadow: 0 0 8px 6px rgba(109, 0, 255, 0.3);
+      border-radius: 50%;
+    }
+  }
+  /* .Github_icon {
+    &:hover {
+      padding: 4px;
+    }
+  }
+  .facebook_icon {
+    &:hover {
+      padding: 4px;
+    }
+  }
+  .linkedin_icon {
+    &:hover {
+      padding: 4px;
+    }
+  } */
 `;
 
 const Line = styled.span`
@@ -51,11 +73,13 @@ const SocialIcons = (props) => {
     <Icons>
       <div>
         <NavLink
+          className="social_buttons"
           to={{ pathname: "https://github.com" }}
           style={{ color: "inherit" }}
           target="_blank"
         >
           <Github
+            className="Github_icon"
             width={25}
             height={25}
             fill={props.theme === "dark" ? DarkTheme.text : DarkTheme.body}
@@ -64,11 +88,13 @@ const SocialIcons = (props) => {
       </div>
       <div>
         <NavLink
+          className="social_buttons"
           to={{ pathname: "https://github.com" }}
           style={{ color: "inherit" }}
           target="_blank"
         >
           <Facebook
+            className="facebook_icon"
             width={25}
             height={25}
             fill={props.theme === "dark" ? DarkTheme.text : DarkTheme.body}
@@ -77,11 +103,13 @@ const SocialIcons = (props) => {
       </div>
       <div>
         <NavLink
+          className="social_buttons"
           to={{ pathname: "https://github.com" }}
           style={{ color: "inherit" }}
           target="_blank"
         >
           <Twitter
+            className="linkedin_icon"
             width={25}
             height={25}
             fill={props.theme === "dark" ? DarkTheme.text : DarkTheme.body}
@@ -90,6 +118,7 @@ const SocialIcons = (props) => {
       </div>
       <div>
         <NavLink
+          className="social_buttons"
           to={{ pathname: "https://github.com" }}
           style={{ color: "inherit" }}
           target="_blank"
