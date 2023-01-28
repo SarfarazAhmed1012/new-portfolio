@@ -1,7 +1,6 @@
 import React from "react";
 import styled, { keyframes, ThemeProvider } from "styled-components";
 import { DarkTheme } from "./Themes";
-import { Design, Develope } from "./AllSvgs";
 import LogoComponent from "../subComponents/LogoComponent";
 import SocialIcons from "../subComponents/SocialIcons";
 import PowerButton from "../subComponents/PowerButton";
@@ -67,8 +66,8 @@ const AboutPage = () => {
           <img src={astronaut} alt="astronaut" />
         </Spaceman>
         <Main>
-          I'm a front-end developer located in India. I love to create simple
-          yet beautiful websites with great user experience.
+          I'm a front-end developer located in Karachi, Pakistan. I love to
+          create simple yet beautiful websites with great user experience.
           <br></br>
           <br></br>
           I'm interested in the whole frontend stack Like trying new things and

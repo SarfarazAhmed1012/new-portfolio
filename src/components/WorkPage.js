@@ -1,70 +1,72 @@
-import React from "react";
-import styled, { keyframes, ThemeProvider } from "styled-components";
+import React, { useRef } from "react";
+import { useEffect } from "react";
+import styled, { ThemeProvider } from "styled-components";
 import { DarkTheme } from "./Themes";
-import { Design, Develope } from "./AllSvgs";
 import LogoComponent from "../subComponents/LogoComponent";
 import SocialIcons from "../subComponents/SocialIcons";
 import PowerButton from "../subComponents/PowerButton";
-import ParticleComponent from "../subComponents/ParticleComponent";
-import astronaut from "../assets/Images/pngegg.png";
+import { Work } from "../data/WorkData";
+import Card from "../subComponents/Card";
+import { YinYang } from "./AllSvgs";
 
 const Box = styled.div`
   background-color: ${(props) => props.theme.body};
-  width: 100vw;
-  height: 100vh;
+  height: 400vh;
   position: relative;
   overflow: hidden;
 `;
 
-const float = keyframes`
-0% { transform: translateY(-10px) }
-50% { transform: translateY(15px) translateX(15px) }
-100% { transform: translateY(-10px) }
-`;
-
-const Spaceman = styled.div`
-  position: absolute;
-  top: 10%;
-  right: 5%;
-  width: 20vw;
-  animation: ${float} 4s ease infinite;
-  img {
-    width: 100%;
-    height: auto;
-  }
-`;
-
-const Main = styled.div`
-  border: 2px solid ${(props) => props.theme.text};
-  color: ${(props) => props.theme.text};
-  padding: 2rem;
-  width: 50vw;
-  height: 60vh;
-  z-index: 3;
-  line-height: 1.5;
+const Main = styled.ul`
+  position: fixed;
+  top: 12rem;
+  left: calc(10rem + 15vw);
+  height: 40vh;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: calc(0.6rem + 1vw);
-  backdrop-filter: blur(4px);
+  color: wheat;
+`;
 
-  position: absolute;
-  left: calc(5rem + 5vw);
-  top: 10rem;
-  font-family: "Segoe UI", monospace;
-  /* font-style: italic; */
+const Rotate = styled.span`
+  display: block;
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  width: 80px;
+  height: 80px;
+  z-index: 1;
 `;
 
 const WorkPage = () => {
+  const ref = useRef(null);
+  const football = useRef(null);
+
+  useEffect(() => {
+    let element = ref.current;
+
+    const rotate = () => {
+      element.style.transform = `translateX(${-window.pageYOffset}px)`;
+      football.current.style.transform =
+        `rotate(` + -window.pageYOffset + "deg)";
+    };
+
+    window.addEventListener("scroll", rotate);
+
+    return () => window.removeEventListener("scroll", rotate);
+  }, []);
+
   return (
     <ThemeProvider theme={DarkTheme}>
       <Box>
         <LogoComponent theme="dark" />
         <SocialIcons theme="dark" />
         <PowerButton />
-        <ParticleComponent theme="dark" />
-
-        <Main>WorkPage</Main>
+        <Main ref={ref}>
+          {Work.map((data) => (
+            <Card key={data.id} data={data} />
+          ))}
+        </Main>
+        <Rotate ref={football}>
+          <YinYang width={80} height={80} fill={DarkTheme.text} />
+        </Rotate>
       </Box>
     </ThemeProvider>
   );
