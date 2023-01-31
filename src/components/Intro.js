@@ -48,17 +48,16 @@ const SubBox = styled.div`
 `;
 
 const Text = styled.div`
-  font-size: calc(1em + 1.5vw);
+  font-size: calc(0.7em + 1.2vw);
   color: ${(props) => props.theme.body};
   padding: 2rem;
-  cursor: pointer;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
 
   & > *:last-child {
     color: ${(props) => `rgba(${props.theme.bodyRgba}, 0.6)`};
-    font-size: calc(0.5rem + 1.5vw);
+    font-size: calc(0.3rem + 1.2vw);
     font-weight: 100;
   }
 `;
@@ -74,7 +73,11 @@ const Intro = () => {
         <Text>
           <h1>Salam,</h1>
           <h3>I am Sarfaraz Ahmed</h3>
-          <h6>I design and code beautiful and simple websites</h6>
+          <h6>
+            A Computer Science Student specializing in building exceptional
+            digital experiences. Currently focusing on building accessible,
+            human-centered products at Upstatement using React JS.
+          </h6>
         </Text>
       </SubBox>
       <SubBox>

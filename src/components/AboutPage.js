@@ -67,16 +67,17 @@ const AboutPage = () => {
           <img src={astronaut} alt="astronaut" />
         </Spaceman>
         <Main>
-          I'm a front-end developer located in Karachi, Pakistan. I love to
-          create simple yet beautiful websites with great user experience.
+          Hi, This is Sarfaraz Ahmed from Karachi, Pakistan and welcome to the
+          world of front-end development, where creativity and coding collide!
           <br></br>
           <br></br>
-          I'm interested in the whole frontend stack Like trying new things and
-          building great projects. I'm an independent freelancer and blogger. I
-          love to write blogs and read books.
+          My passion for programming in C++ and building dynamic websites using
+          React JS drives me to constantly push the boundaries of what's
+          possible on the web.
           <br></br>
-          <br></br>I believe everything is an Art when you put your
-          consciousness in it. You can connect with me via social links.
+          <br></br>With each project, I strive to create visually stunning and
+          intuitive user experiences that leave a lasting impression. Let's
+          create something amazing together!"
         </Main>
         <BigTitle
           text="ABOUT"

@@ -1,62 +1,64 @@
 export const Work = [
   {
     id: 1,
-    name: "Agency Landing Page",
+    name: "QuranRecite",
     description:
-      "It is build on top of the React JS, with styledComponents and GSAP for smooth scrolling animations.",
-    tags: ["react", "gsap", "styledComponents"],
+      "In this application you can select and listen to all the surahs from Quran e Pak and you also can change the reciters",
+    tags: ["react", "api", "css"],
 
-    demo: "https://agency-website-eta.vercel.app/",
-    github: "https://github.com/codebucks27/Agency-website",
+    demo: "https://quranrecitation.netlify.app/",
+    github: "https://github.com/SarfarazAhmed1012/Quran-Recitation-Application",
   },
   {
     id: 2,
-    name: "Job listing website",
+    name: "Youthtube",
     description:
-      "A Job listing website build in ReactJS. With searching and filtering functionalities.",
-    tags: ["react", "sass"],
+      "A youtube clone with all the functionalities like search, select, play and show related videos. ",
+    tags: ["React", "Material UI V5", "Rapid API"],
 
-    demo: "http://react-job-listing-website.codebucks27.vercel.app/",
-    github: "https://github.com/codebucks27/react-job-listing-website",
+    demo: "https://youthtube.netlify.app/",
+    github: "https://github.com/SarfarazAhmed1012/youtube-clone",
   },
   {
     id: 3,
-    name: "Dev.to Clone",
+    name: "Sociofy (Social Media UI)",
     description:
-      "A clone of Dev.to build using ReactJS. With realtime fetching of articles from dev.to using API.",
-    tags: ["react", "api", "sass"],
+      "Social Media UI using React JS and Material UI. With the functionality of Dark Mode",
+    tags: ["React", "Material UI"],
 
-    demo: "http://devto-clone-codebucks27.vercel.app/",
-    github: "https://github.com/codebucks27/devto-clone",
+    demo: "https://sociofyy.netlify.app/",
+    github: "https://github.com/SarfarazAhmed1012/social-media-ui-material-ui",
   },
   {
     id: 4,
-    name: "Sidebar Menu",
+    name: "Admin Dashboard",
     description:
-      "A cool looking sidebar menu build using ReactJS and styledComponents.It has really smooth animations.",
-    tags: ["react", "styledComponents", "react-router"],
+      "Created a responsive admin dashboard that utilizes React JS and the Context API, incorporating Synfusion's calendar, kanban, and editor components",
+    tags: ["React", "context api", "Syncfusion Components"],
 
-    demo: "https://react-sidebar.vercel.app/",
-    github: "https://github.com/codebucks27/react-sidebar",
+    demo: "https://syncfusion-admin-dashboard-1012.netlify.app/",
+    github:
+      "https://github.com/SarfarazAhmed1012/Admin-Dashboard-using-React-JS",
   },
   {
     id: 5,
-    name: "Todo App(React + Redux)",
+    name: "GYMsii",
     description:
-      "A todo app build using Redux-toolkit and framer-motion for smooth animations.",
-    tags: ["react", "redux", "framer-motion"],
+      "A GYM application in which you can look for any exercise, you can search on the basis of the muscles, or equipments. On viewing an exercise, related exercises will be shown too.",
+    tags: ["react", "RAPID API", "Material UI"],
 
-    demo: "http://react-redux-todo-app-git-main-codebucks27.vercel.app/",
-    github: "https://github.com/codebucks27/React-Redux-Todo-App",
+    demo: "https://gymsii.netlify.app/",
+    github: "https://github.com/SarfarazAhmed1012/gym-mui-rapid-api",
   },
   {
     id: 6,
-    name: "Responsive Navigation Menu",
+    name: "Expanse Tracker",
     description:
-      "A reponsive navbar menu component in ReactJS with react-router functionalities. Built from scratch.",
-    tags: ["react", "react-router", "css"],
+      "A complete MERN Application in which you can add transactions category wise, and on adding the transaction it is shown in the list and chart is updated on the real time.",
+    tags: ["MERN", "Redux Toolkit", "Chart JS", "Tailwind CSS"],
 
-    demo: "http://react-responsive-navbar-codebucks27.vercel.app/",
-    github: "https://github.com/codebucks27/React-responsive-navbar",
+    demo: "https://portfolio-sarfaraz-ahmed.netlify.app/",
+    github:
+      "https://github.com/SarfarazAhmed1012/expense_tracker_MERN_semester_project",
   },
 ];

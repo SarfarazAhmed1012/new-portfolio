@@ -87,45 +87,47 @@ const MySkillsPage = () => {
         <ParticleComponent theme="light" />
         <Main>
           <Title>
-            <Design width={40} height={40} />
-            Designer
+            <Develope width={40} height={40} />
+            Programmer
           </Title>
+          <Description>I love to do coding and building logic.</Description>
           <Description>
-            I love to create design which speaks, Keep it clean, minimal and
-            simple.
-          </Description>
-          <Description>
-            <strong>I like to design</strong>
+            <strong>Problems' areas:</strong>
             <ul>
-              <li>Web Design</li>
-              <li>Mobile Games</li>
+              <li>Algorithms</li>
+              <li>Arrays</li>
+              <li>Linked Lists</li>
+              <li>Graphs</li>
+              <li>Trees</li>
             </ul>
           </Description>
           <Description>
-            <strong>Tools</strong>
+            <strong>Languages</strong>
             <ul>
-              <li>Web Design</li>
+              <li>C++</li>
+              <li>Python</li>
             </ul>
           </Description>
         </Main>
         <Main>
           <Title>
-            <Develope width={40} height={40} />
+            <Design width={40} height={40} />
             Front End Developer
           </Title>
           <Description>
-            I value business or brand for which i'm creating, thus i enjoy
-            bringing new ideas to life.
+            A React JS front-end developer with a passion for crafting seamless
+            user experiences through dynamic and interactive web applications.
           </Description>
           <Description>
             <strong>Skills</strong>
             <p>
-              HTML, CSS, Javascript, Redux, Sass, Bootstrap, Tailwind, Firebase.
+              HTML, CSS, Javascript, React JS, Redux, Sass, Tailwind, Firebase,
+              Node JS.
             </p>
           </Description>
           <Description>
             <strong>Tools</strong>
-            <p>VS Code, Github, Codepen</p>
+            <p>VS Code, Figma</p>
           </Description>
         </Main>
         <BigTitle

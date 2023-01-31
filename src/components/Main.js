@@ -186,28 +186,83 @@ const Main = () => {
           target="_blank"
           to={{ pathname: "mailto:sarfarazahmed1012@gmail.com" }}
         >
-          <motion.h3 whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+          <motion.h3
+            initial={{
+              y: -200,
+              transition: { type: "spring", duration: 1.5, delay: 1 },
+            }}
+            animate={{
+              y: 0,
+              transition: { type: "spring", duration: 1.5, delay: 1 },
+            }}
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+          >
             Salam..
           </motion.h3>
         </Contact>
         <BLOG to="/blog">
-          <motion.h3 whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+          <motion.h3
+            initial={{
+              y: -200,
+              transition: { type: "spring", duration: 1.5, delay: 1 },
+            }}
+            animate={{
+              y: 0,
+              transition: { type: "spring", duration: 1.5, delay: 1 },
+            }}
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+          >
             My Blogs
           </motion.h3>
         </BLOG>
         <Work to="/work" click={click}>
-          <motion.h3 whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+          <motion.h3
+            initial={{
+              y: -200,
+              transition: { type: "spring", duration: 1.5, delay: 1 },
+            }}
+            animate={{
+              y: 0,
+              transition: { type: "spring", duration: 1.5, delay: 1 },
+            }}
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+          >
             My work
           </motion.h3>
         </Work>
         <BottomBar>
           <ABOUT to="/about" click={click}>
-            <motion.h3 whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+            <motion.h3
+              initial={{
+                y: 200,
+                transition: { type: "spring", duration: 1.5, delay: 1 },
+              }}
+              animate={{
+                y: 0,
+                transition: { type: "spring", duration: 1.5, delay: 1 },
+              }}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+            >
               About
             </motion.h3>
           </ABOUT>
           <SKILLS to="/skills">
-            <motion.h3 whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+            <motion.h3
+              initial={{
+                y: 200,
+                transition: { type: "spring", duration: 1.5, delay: 1 },
+              }}
+              animate={{
+                y: 0,
+                transition: { type: "spring", duration: 1.5, delay: 1 },
+              }}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+            >
               Skills
             </motion.h3>
           </SKILLS>

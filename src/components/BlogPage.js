@@ -9,8 +9,9 @@ import { Blogs } from "../data/BlogData";
 import AnchorComponent from "../subComponents/Anchor";
 import { useState } from "react";
 import BigTitle from "../subComponents/BigTitle";
+import { motion } from "framer-motion";
 
-const MainContainer = styled.div`
+const MainContainer = styled(motion.div)`
   background-image: url(${img});
   background-size: cover;
   background-repeat: no-repeat;
@@ -40,6 +41,18 @@ const Grid = styled.div`
   z-index: 2;
 `;
 
+const container = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+
+    transition: {
+      staggerChildren: 0.5,
+      duration: 0.5,
+    },
+  },
+};
+
 const BlogPage = () => {
   const [numbers, setNumbers] = useState(0);
   useEffect(() => {
@@ -48,7 +61,12 @@ const BlogPage = () => {
   }, []);
 
   return (
-    <MainContainer>
+    <MainContainer
+      variants={container}
+      initial="hidden"
+      animate="show"
+      exit={{ opacity: 0, transition: { duration: 0.5 } }}
+    >
       <Container>
         <LogoComponent />
         <PowerButton />
@@ -62,7 +80,7 @@ const BlogPage = () => {
           </Grid>
         </Center>
         <BigTitle
-          text="BLOGS"
+          text="MY BLOGS"
           top="5rem"
           left="5rem"
           rgba="rgba(61, 61, 71, 0.6)"

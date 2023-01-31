@@ -7,7 +7,6 @@ import SocialIcons from "../subComponents/SocialIcons";
 import PowerButton from "../subComponents/PowerButton";
 import { Work } from "../data/WorkData";
 import Card from "../subComponents/Card";
-import { YinYang } from "./AllSvgs";
 import BigTitle from "../subComponents/BigTitle";
 import { motion } from "framer-motion";
 
@@ -29,16 +28,6 @@ const Main = styled(motion.ul)`
   z-index: 2;
 `;
 
-const Rotate = styled.span`
-  display: block;
-  position: fixed;
-  right: 1rem;
-  bottom: 1rem;
-  width: 80px;
-  height: 80px;
-  z-index: 1;
-`;
-
 const container = {
   hidden: { opacity: 0 },
   show: {
@@ -53,15 +42,13 @@ const container = {
 
 const WorkPage = () => {
   const ref = useRef(null);
-  const football = useRef(null);
 
   useEffect(() => {
     let element = ref.current;
 
     const rotate = () => {
       element.style.transform = `translateX(${-window.pageYOffset}px)`;
-      football.current.style.transform =
-        `rotate(` + -window.pageYOffset + "deg)";
+      // football.current.style.transform = `rotate(` + -window.pageYOffset + ")";
     };
 
     window.addEventListener("scroll", rotate);
@@ -80,9 +67,7 @@ const WorkPage = () => {
             <Card key={data.id} data={data} />
           ))}
         </Main>
-        <Rotate ref={football}>
-          <YinYang width={80} height={80} fill={DarkTheme.text} />
-        </Rotate>
+
         <BigTitle
           text="WORK"
           top="10%"
