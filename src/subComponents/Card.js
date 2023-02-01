@@ -18,6 +18,21 @@ const Box = styled(motion.li)`
   border: 1px solid ${(props) => props.theme.body};
   transition: all 0.2s ease;
 
+  @media (max-width: 900px) {
+    width: 14rem;
+    height: 30vh;
+  }
+  @media (max-width: 700px) {
+    margin-right: 5rem;
+    width: 10rem;
+    height: 25vh;
+  }
+  @media (max-width: 400px) {
+    width: 10rem;
+    height: 23vh;
+    padding: 1.5rem 0.5rem;
+  }
+
   &:hover {
     background-color: ${(props) => props.theme.body};
     color: ${(props) => props.theme.text};
@@ -27,12 +42,30 @@ const Box = styled(motion.li)`
 
 const Title = styled.h2`
   font-size: calc(1em + 0.5vw);
+  @media (max-width: 900px) {
+    font-size: calc(1em + 0.3vw);
+  }
+  @media (max-width: 400px) {
+    font-size: calc(0.8em + 0.7vw);
+  }
 `;
 
 const Description = styled.h3`
   font-size: calc(0.8em + 0.3ew);
   font-family: "Karla", sans-serif;
   font-weight: 500;
+  @media (max-width: 900px) {
+    font-size: calc(0.7em + 0.2vw);
+  }
+
+  @media (max-width: 500px) {
+    font-size: calc(0.7em + 0.3vw);
+    font-weight: 400;
+  }
+  @media (max-width: 400px) {
+    font-size: calc(0.5em + 0.2vw);
+    font-weight: 300;
+  }
 `;
 
 const Tags = styled.div`
@@ -48,6 +81,13 @@ const Tags = styled.div`
 const Tag = styled.span`
   margin-right: 1rem;
   font-size: calc(0.8rem + 0.3vw);
+  @media (max-width: 900px) {
+    font-size: calc(0.7em + 0.2vw);
+  }
+  @media (max-width: 400px) {
+    margin-right: 0.8rem;
+    font-size: calc(0.6rem + 0.2vw);
+  }
 `;
 
 const Footer = styled.footer`
@@ -62,6 +102,17 @@ const Link = styled(NavLink)`
   padding: 0.5rem calc(2rem + 2vw);
   border-radius: 6px 6px 6px 6px;
   font-size: calc(1em + 0.5vw);
+
+  @media (max-width: 900px) {
+    font-size: calc(0.7em + 0.2vw);
+  }
+
+  @media (max-width: 400px) {
+    font-size: calc(0.7em + 0.3vw);
+    padding: 0.6rem calc(1rem + 0.3vw);
+    text-align: center;
+    height: 8px;
+  }
 
   ${Box}: hover & {
     background-color: ${(props) => props.theme.text};
@@ -80,6 +131,11 @@ const Git = styled(NavLink)`
     & > * {
       fill: ${(props) => props.theme.text};
     }
+  }
+  @media (max-width: 400px) {
+    /* font-size: calc(0.7em + 0.2vw);
+    width: 10px;
+    height: 10px; */
   }
 `;
 

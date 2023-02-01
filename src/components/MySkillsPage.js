@@ -16,6 +16,12 @@ const Box = styled.div`
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  @media (max-width: 520px) {
+    flex-direction: column;
+  }
+  @media (max-width: 400px) {
+    flex-direction: column;
+  }
 `;
 
 const Main = styled.div`
@@ -33,6 +39,26 @@ const Main = styled.div`
   justify-content: space-between;
   cursor: pointer;
 
+  @media (max-width: 800px) {
+    padding: 1.5rem;
+    width: 28vw;
+    height: 40vh;
+    line-height: 1.3;
+    justify-content: center;
+  }
+  @media (max-width: 520px) {
+    margin-top: 3rem;
+    width: 43vw;
+    height: 24vh;
+    line-height: 1.3;
+    justify-content: center;
+  }
+  @media (max-width: 400px) {
+    margin-top: 3rem;
+    width: 38vw;
+    height: 25vh;
+  }
+
   &:hover {
     background-color: ${(props) => props.theme.text};
     color: ${(props) => props.theme.body};
@@ -44,6 +70,15 @@ const Title = styled.h2`
   justify-content: center;
   align-items: center;
   font-size: calc(1em + 1vw);
+  @media (max-width: 800px) {
+    font-size: calc(0.8em + 0.8vw);
+  }
+  @media (max-width: 520px) {
+    font-size: calc(0.6rem + 0.4vw);
+  }
+  @media (max-width: 400px) {
+    font-size: calc(0.3rem + 0.4vw);
+  }
 
   ${Main}:hover & {
     & > * {
@@ -58,9 +93,18 @@ const Title = styled.h2`
 
 const Description = styled.div`
   color: ${(props) => props.theme.text};
-  font-size: calc(0.6rem + 1vw);
-  padding: 0.5rem 0;
+  font-size: calc(0.5rem + 0.8vw);
+  padding: 0.2rem 0;
 
+  @media (max-width: 800px) {
+    font-size: calc(0.4rem + 0.6vw);
+  }
+  @media (max-width: 520px) {
+    font-size: calc(0.5rem + 0.4vw);
+  }
+  @media (max-width: 400px) {
+    font-size: calc(0.3rem + 0.4vw);
+  }
   ${Main}:hover & {
     color: ${(props) => props.theme.body};
   }
@@ -68,12 +112,27 @@ const Description = styled.div`
   strong {
     margin-bottom: 1rem;
     text-transform: uppercase;
+    @media (max-width: 800px) {
+      font-size: calc(0.5rem + 0.8vw);
+    }
   }
   ul,
   p {
     margin-left: 2rem;
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: #384052;
+    @media (max-width: 800px) {
+      font-size: calc(0.4rem + 0.5vw);
+    }
+    @media (max-width: 600px) {
+      font-size: calc(0.4rem + 0.6vw);
+    }
+    @media (max-width: 520px) {
+      font-size: calc(0.3rem + 0.4vw);
+    }
+    @media (max-width: 400px) {
+      font-size: calc(0.3rem + 0.4vw);
+    }
   }
 `;
 
@@ -90,7 +149,10 @@ const MySkillsPage = () => {
             <Develope width={40} height={40} />
             Programmer
           </Title>
-          <Description>I love to do coding and building logic.</Description>
+          <Description>
+            I love to do coding in data structure and algorithm implementing
+            C++, consistently looking for optimized solutions for DSA problems.
+          </Description>
           <Description>
             <strong>Problems' areas:</strong>
             <ul>
@@ -121,8 +183,9 @@ const MySkillsPage = () => {
           <Description>
             <strong>Skills</strong>
             <p>
-              HTML, CSS, Javascript, React JS, Redux, Sass, Tailwind, Firebase,
-              Node JS.
+              CSS, Modern Javascript(ES6+) , React JS, Redux, React Hooks and
+              Context API, Sass, Tailwind, RESTful API integration, React
+              Testing Library, .
             </p>
           </Description>
           <Description>

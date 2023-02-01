@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import styled, { keyframes } from "styled-components";
-import music from "../assets/audio/u-said-it-v13-1167.mp3";
+import music from "../assets/audio/surah duha.mp3";
 const Box = styled.div`
   display: flex;
   cursor: pointer;
@@ -12,6 +12,11 @@ const Box = styled.div`
     background-color: rgba(109, 0, 255, 0.3);
     box-shadow: 0 0 8px 6px rgba(109, 0, 255, 0.3);
     border-radius: 50%;
+  }
+
+  @media (max-width: 767px) {
+    left: 2rem;
+    top: 8rem;
   }
 
   & > *:nth-child(1) {
@@ -48,6 +53,7 @@ const play = keyframes`
 
 const Line = styled.span`
   background: ${(props) => props.theme.text};
+  border: 1px solid ${(props) => props.theme.body};
   animation: ${play} 1s ease infinite;
   animation-play-state: ${(props) => (props.click ? "running" : "paused")};
   height: 1.4rem;

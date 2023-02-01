@@ -39,6 +39,10 @@ const Grid = styled.div`
   grid-template-columns: repeat(2, minmax(calc(10rem + 15vw), 1fr));
   grid-gap: calc(1rem + 2vw);
   z-index: 2;
+  @media (max-width: 700px) {
+    display: inline-block;
+    margin-bottom: 120px;
+  }
 `;
 
 const container = {

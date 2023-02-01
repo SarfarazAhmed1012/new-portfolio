@@ -61,6 +61,12 @@ const BLOG = styled(NavLink)`
   transform: rotate(90deg) translate(-50%, -50%);
   text-decoration: none;
   z-index: 1;
+  @media (max-width: 500px) {
+    top: ${(props) => (props.click ? "50%" : "50%")};
+    right: ${(props) => (props.click ? "50%" : "calc(0.7rem + 1vw)")};
+    font-size: 1rem;
+    /* left: 8rem; */
+  }
 `;
 
 const Work = styled(NavLink)`
@@ -72,6 +78,17 @@ const Work = styled(NavLink)`
   transform: rotate(-90deg) translate(-50%, -50%);
   text-decoration: none;
   z-index: 1;
+  @media (max-width: 500px) {
+    left: ${(props) =>
+      props.click ? "calc(0.7rem + 1vw)" : "calc(0.7rem + 1vw)"};
+    top: 40%;
+    font-size: 1rem;
+    /* z-index: 3; */
+    /* left: 8rem; */
+  }
+  @media (max-width: 900px) {
+    top: 40%;
+  }
 `;
 const BottomBar = styled.div`
   position: absolute;
@@ -110,6 +127,10 @@ const Center = styled.button`
   position: absolute;
   top: ${(props) => (props.click ? "85%" : "50%")};
   left: ${(props) => (props.click ? "92%" : "50%")};
+  @media (max-width: 500px) {
+    left: ${(props) => (props.click ? "88%" : "50%")};
+    /* left: 8rem; */
+  }
   transform: translate(-50%, -50%);
   border: none;
   outline: none;
@@ -198,7 +219,7 @@ const Main = () => {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
           >
-            Salam..
+            Say Salam!
           </motion.h3>
         </Contact>
         <BLOG to="/blog">

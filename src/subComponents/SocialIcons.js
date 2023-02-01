@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import { Facebook, Github, Twitter, YouTube } from "../components/AllSvgs";
+import { Facebook, Github, LinkedIn } from "../components/AllSvgs";
 import styled from "styled-components";
 import { DarkTheme } from "../components/Themes";
 import { motion } from "framer-motion";
@@ -79,7 +79,7 @@ const SocialIcons = (props) => {
       >
         <NavLink
           className="social_buttons"
-          to={{ pathname: "https://github.com" }}
+          to={{ pathname: "https://github.com/SarfarazAhmed1012" }}
           style={{ color: "inherit" }}
           target="_blank"
         >
@@ -99,7 +99,7 @@ const SocialIcons = (props) => {
       >
         <NavLink
           className="social_buttons"
-          to={{ pathname: "https://github.com" }}
+          to={{ pathname: "https://www.facebook.com/sarfarazahmed1012/" }}
           style={{ color: "inherit" }}
           target="_blank"
         >
@@ -111,25 +111,7 @@ const SocialIcons = (props) => {
           />
         </NavLink>
       </motion.div>
-      <motion.div
-        initial={{ transform: "scale(0)" }}
-        animate={{ scale: [0, 1, 1.5, 1] }}
-        transition={{ type: "spring", duration: 1, delay: 1.4 }}
-      >
-        <NavLink
-          className="social_buttons"
-          to={{ pathname: "https://github.com" }}
-          style={{ color: "inherit" }}
-          target="_blank"
-        >
-          <Twitter
-            className="linkedin_icon"
-            width={25}
-            height={25}
-            fill={props.theme === "dark" ? DarkTheme.text : DarkTheme.body}
-          />
-        </NavLink>
-      </motion.div>
+
       <motion.div
         initial={{ transform: "scale(0)" }}
         animate={{ scale: [0, 1, 1.5, 1] }}
@@ -137,11 +119,13 @@ const SocialIcons = (props) => {
       >
         <NavLink
           className="social_buttons"
-          to={{ pathname: "https://github.com" }}
+          to={{
+            pathname: "https://www.linkedin.com/in/sarfaraz-ahmed-215ba016a/",
+          }}
           style={{ color: "inherit" }}
           target="_blank"
         >
-          <YouTube
+          <LinkedIn
             width={25}
             height={25}
             fill={props.theme === "dark" ? DarkTheme.text : DarkTheme.body}

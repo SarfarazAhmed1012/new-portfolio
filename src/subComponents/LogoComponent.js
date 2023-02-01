@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { DarkTheme } from "../components/Themes";
 
@@ -14,7 +14,29 @@ const Logo = styled.h1`
   z-index: 3;
 `;
 const LogoComponent = (props) => {
-  return <Logo color={props.theme}> Ahmed</Logo>;
+  const [width, setWidth] = useState(window.innerWidth);
+  const [text, setText] = useState("sarfaraz");
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWidth(window.innerWidth);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (width <= 400) {
+      setText("SA");
+    } else if (width <= 800) {
+      setText("Ahmed");
+    } else {
+      setText("Ahmed");
+    }
+  }, [width]);
+  return <Logo color={props.theme}> {text}</Logo>;
 };
 
 export default LogoComponent;

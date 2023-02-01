@@ -24,6 +24,22 @@ const Box = styled(motion(NavLink))`
     background-color: ${(props) => props.theme.text};
     border: 0.5px solid rgba(228, 236, 212, 0.9);
   }
+
+  @media (max-width: 800px) {
+    width: calc(8rem + 12vw);
+    height: 18rem;
+    padding: 0.8rem;
+  }
+  @media (max-width: 700px) {
+    margin-bottom: 60px;
+    width: calc(12rem + 16vw);
+    height: 15rem;
+  }
+  @media (max-width: 450px) {
+    margin-bottom: 30px;
+    width: calc(10rem + 13vw);
+    height: 15rem;
+  }
 `;
 
 const Image = styled.div`
@@ -46,18 +62,50 @@ const Title = styled.h3`
   font-family: "Karla", sans-serif;
   font-weight: 700;
   border-bottom: 1px solid ${(props) => props.theme.text};
+  @media (max-width: 800px) {
+    font-weight: 500;
+    padding: 0.3rem 0;
+    font-size: 1rem;
+  }
+  @media (max-width: 450px) {
+    font-weight: 400;
+    padding: 0.2rem 0;
+    font-size: 0.9rem;
+  }
 `;
 
 const HashTags = styled.div`
   padding: 0.5rem 0;
+  @media (max-width: 800px) {
+    padding: 0.3rem 0;
+  }
+  @media (max-width: 450px) {
+    padding: 0.2rem 0;
+  }
 `;
 
 const Tag = styled.span`
   padding-right: 0.5rem;
+  @media (max-width: 800px) {
+    padding: 0.3rem 0;
+    font-size: 0.9rem;
+  }
+  @media (max-width: 450px) {
+    padding: 0.2rem 0;
+    font-size: 0.8rem;
+  }
 `;
 
 const Date = styled.span`
   padding: 0.5rem 0;
+  @media (max-width: 800px) {
+    padding: 0.3rem 0;
+    font-size: 0.9rem;
+  }
+  @media (max-width: 450px) {
+    padding: 0.2rem 0;
+    font-size: 0.8rem;
+  }
 `;
 
 const Container = styled(motion.div)``;
@@ -84,7 +132,7 @@ const BlogComponent = (props) => {
         <Title>{name}</Title>
         <HashTags>
           {tags.map((t, id) => {
-            return <Tag key={id}>#{t}</Tag>;
+            return <Tag key={id}> #{t}</Tag>;
           })}
         </HashTags>
         <Date>{date}</Date>
